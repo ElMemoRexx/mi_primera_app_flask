@@ -1,12 +1,125 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi App Flask</title>
+    <title>Mi Sencilla To Do App</title>
 </head>
+
 <body>
-    <h1>¡Hola desde Flask!</h1>
-    <p>Esta es tu página de inicio.</p>
+    <header>
+        <h1>Bienvenido a mi To Do App</h1>
+        <button>Agregar nuevo pendiente</button>
+        <p>Organiza tus tareas diarias de forma sencilla.</p>
+    </header>
+
+    <main>
+        <section id="add-task-section">
+            <h2>Añadir Nueva Tarea</h2>
+            <form action="#" method="POST">
+                <div>
+                    <label for="task-name">Nombre de la Tarea:</label>
+                    <input type="text" id="task-name" name="task_name" required placeholder="Ej: Comprar víveres">
+                </div>
+                <div>
+                    <label for="task-description">Descripción:</label>
+                    <textarea id="task-description" name="task_description" rows="3"
+                        placeholder="Ej: Leche, pan, huevos..."></textarea>
+                </div>
+                <div>
+                    <label for="task-status">Estado:</label>
+                    <select id="task-status" name="task_status">
+                        <option value="pending">Pendiente</option>
+                        <option value="in_progress">En Proceso</option>
+                        <option value="completed">Finalizado</option>
+                    </select>
+                </div>
+                <button type="submit">Añadir Tarea</button>
+            </form>
+        </section>
+
+        <section id="pending-tasks">
+            <h2>Pendientes</h2>
+
+            <!-- Botón para eliminar todas las tareas pendientes -->
+            <button>Eliminar todos los pendientes</button>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Acabar Programación Avanzada.</td>
+                        <td>Necesito acabar todos los temas.</td>
+                        <td>
+                            <button>Editar</button>
+                            <button>Eliminar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="in-progress-tasks">
+            <h2>En Proceso</h2>
+
+            <!-- Botón para eliminar todas las tareas en proceso -->
+            <button>Eliminar todas las tareas en proceso</button>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Evaluar a estudiantes.</td>
+                        <td>Le están echando ganas.</td>
+                        <td>
+                            <button>Editar</button>
+                            <button>Eliminar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="completed-tasks">
+            <h2>Finalizado</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Desayunar.</td>
+                        <td>Si tan solo alguien me invitara a desayunar.</td>
+                        <td>
+                            <button>Editar</button>
+                            <button>Eliminar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Mi Sencilla To Do App. Todos los derechos reservados.</p>
+    </footer>
 </body>
+
 </html>
